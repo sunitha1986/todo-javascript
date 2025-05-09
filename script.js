@@ -27,8 +27,10 @@ function addDeleteBtn(node) {
 const addNewTodo = () => {
   const li = document.createElement("li");
   const inputValue = document.getElementById("todo-input").value;
+  const span = document.createElement("SPAN");
   const textNode = document.createTextNode(inputValue);
-  li.appendChild(textNode);
+  span.appendChild(txt);
+  li.appendChild(span);
   if (inputValue == "") {
     alert("Enter input ");
   } else {
@@ -40,3 +42,16 @@ const addNewTodo = () => {
 
   onClickDeleteBtn();
 };
+
+//Add a "checked" symbol when clicking on a list item.
+
+const list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (e) {
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle("checked");
+    }
+  },
+  false
+);

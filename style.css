@@ -10,6 +10,7 @@
   color: white;
   text-align: center;
   background-color: gray;
+  border-radius: 20px;
 }
 
 .header:after {
@@ -22,9 +23,40 @@
 input {
   margin: 0;
   border: none;
-  border-radius: 0;
+  border-radius: 25px;
   width: 75%;
   font-size: 16px;
+  padding: 10px;
+}
+
+.add-button {
+  padding: 10px 50px;
+  border-radius: 25px;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+ul li span.close {
+  text-decoration: none !important;
 }
 
 /* Remove margins and padding from the list. */
@@ -45,9 +77,16 @@ ul li {
   font-size: 18px;
   transition: 0.2s;
   user-select: none;
+  display: flex;
   justify-content: space-between;
+  background-color: aquamarine;
+  border-radius: 25px;
+  margin: 20px;
 }
 
 .close {
   padding: 12px 16px;
+  border-radius: 50%;
+  background-color: aqua;
+  font-weight: bold;
 }
