@@ -29,7 +29,7 @@ const addNewTodo = () => {
   const inputValue = document.getElementById("todo-input").value;
   const span = document.createElement("SPAN");
   const textNode = document.createTextNode(inputValue);
-  span.appendChild(txt);
+  span.appendChild(textNode);
   li.appendChild(span);
   if (inputValue == "") {
     alert("Enter input ");
